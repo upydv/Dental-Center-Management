@@ -109,7 +109,7 @@ const PatientManagement = () => {
   }
 
   const handleFileUpload = (files) => {
-    const validFiles = []
+   // const validFiles = []
     const maxSize = 5 * 1024 * 1024 // 5MB
     const allowedTypes = [
       "image/jpeg",

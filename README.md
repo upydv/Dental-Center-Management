@@ -1,70 +1,239 @@
-# Getting Started with Create React App
+# ENTNT Dental Center Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive dental practice management system built with React and Next.js, featuring role-based access control, appointment scheduling, patient management, and file handling capabilities.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### 👨‍⚕️ Admin Features
+- **Dashboard Overview**: Real-time statistics and insights
+- **Patient Management**: Complete patient records with medical history
+- **Appointment Scheduling**: Full appointment lifecycle management
+- **Calendar View**: Visual appointment scheduling and management
+- **File Management**: Upload and manage treatment records, X-rays, and documents
+- **Treatment Tracking**: Record treatments, costs, and follow-up appointments
 
-### `npm start`
+### 👤 Patient Features
+- **Personal Dashboard**: View appointment statistics and upcoming visits
+- **Appointment History**: Complete treatment history with costs and details
+- **File Access**: Download treatment records and medical documents
+- **Secure Access**: View only personal data with strict privacy controls
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔐 Security & Authentication
+- **Role-Based Access Control**: Separate admin and patient interfaces
+- **Secure Login System**: Email/password authentication
+- **Data Privacy**: Patients can only access their own records
+- **Session Management**: Persistent login with localStorage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📱 User Interface
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Modern UI**: Clean, professional interface with shadcn/ui components
+- **Intuitive Navigation**: Easy-to-use sidebar navigation
+- **Real-time Updates**: Dynamic data updates without page refresh
 
-### `npm test`
+## 🛠️ Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React 18, Next.js 14 (App Router)
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **State Management**: React Context API
+- **Storage**: localStorage for data persistence
+- **File Handling**: Base64 encoding for file storage
 
-### `npm run build`
+## 📋 Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js 18+ 
+- npm or yarn package manager
+- Modern web browser
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Option 1: Using v0 (Recommended)
+1. Click the "Download Code" button in the v0 interface
+2. Follow the automated setup instructions
+3. The system will handle all dependencies and configuration
 
-### `npm run eject`
+### Option 2: Manual Setup
+1. Clone or download the project files
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+3. Start the development server:
+   \`\`\`bash
+   npm start
+   \`\`\`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👥 Demo Accounts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Admin Account
+- **Email**: `admin@entnt.in`
+- **Password**: `admin123`
+- **Access**: Full system administration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Patient Accounts
+- **Email**: `john@entnt.in`
+- **Password**: `patient123`
+- **Access**: Personal appointment data only
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Project Structure
 
-## Learn More
+\`\`\`
+src/
+├── components/
+│   ├── auth/                 # Authentication components
+│   │   ├── LoginPage.jsx
+│   │   └── ProtectedRoute.jsx
+│   ├── dashboard/            # Dashboard components
+│   │   └── Dashboard.jsx
+│   ├── patients/             # Patient management
+│   │   └── PatientManagement.jsx
+│   ├── appointments/         # Appointment management
+│   │   └── AppointmentManagement.jsx
+│   ├── calendar/             # Calendar view
+│   │   └── CalendarView.jsx
+│   ├── patient-view/         # Patient portal
+│   │   └── PatientView.jsx
+│   ├── layout/               # Layout components
+│   │   └── DashboardLayout.jsx
+│   └── ui/                   # Reusable UI components
+├── contexts/                 # React Context providers
+│   ├── AuthContext.js
+│   └── DataContext.js
+├── lib/                      # Utility functions
+│   └── utils.js
+└── index.css                 # Global styles
+\`\`\`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Configuration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Environment Variables
+The application uses localStorage for data persistence. No external database configuration is required for the demo version.
 
-### Code Splitting
+### Customization
+- **Styling**: Modify `src/index.css` for global styles
+- **Components**: Update individual component files for UI changes
+- **Data**: Modify demo data in `src/contexts/DataContext.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📊 Key Features Breakdown
 
-### Analyzing the Bundle Size
+### Patient Management
+- Add, edit, and delete patient records
+- Store comprehensive medical history
+- Emergency contact information
+- Search and filter capabilities
+- File attachment support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Appointment System
+- Schedule appointments with date/time selection
+- Multiple appointment types (Consultation, Cleaning, Root Canal, etc.)
+- Status tracking (Scheduled, Confirmed, Completed, Cancelled)
+- Cost tracking and billing information
+- Treatment notes and follow-up scheduling
 
-### Making a Progressive Web App
+### File Management
+- Upload multiple file types (Images, PDFs, Documents)
+- File size validation (5MB limit)
+- Secure file storage and retrieval
+- Download functionality for patients
+- File organization by appointment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Calendar Integration
+- Monthly and weekly calendar views
+- Visual appointment scheduling
+- Drag-and-drop functionality
+- Color-coded appointment status
+- Today's appointments summary
 
-### Advanced Configuration
+## 🔒 Security Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Authentication**: Secure login system with role validation
+- **Authorization**: Role-based access control (Admin/Patient)
+- **Data Privacy**: Strict data isolation between patients
+- **Session Security**: Secure session management
+- **Input Validation**: Form validation and sanitization
 
-### Deployment
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The application is fully responsive and optimized for:
+- **Desktop**: Full-featured interface with sidebar navigation
+- **Tablet**: Adapted layout with touch-friendly controls
+- **Mobile**: Optimized mobile interface with collapsible navigation
 
-### `npm run build` fails to minify
+## 🧪 Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Manual Testing
+1. Test admin login and patient management
+2. Verify appointment scheduling and editing
+3. Test file upload and download functionality
+4. Verify patient portal access restrictions
+5. Test responsive design on different devices
+
+### Demo Data
+The application includes comprehensive demo data:
+- 3 sample patients with complete profiles
+- Multiple appointments with different statuses
+- Sample file attachments
+- Realistic medical history data
+
+## 🚀 Deployment
+
+### Development
+\`\`\`bash
+npm start
+\`\`\`
+
+### Production Build
+\`\`\`bash
+npm run build
+npm run serve
+\`\`\`
+
+### Deployment Platforms
+- **Vercel**: Optimized for Next.js applications
+- **Netlify**: Static site deployment
+- **AWS S3**: Static hosting with CloudFront
+- **GitHub Pages**: Free static hosting
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🆘 Support
+
+For technical support or questions:
+- Create an issue in the repository
+- Contact the development team
+- Check the documentation for common solutions
+
+## 🔄 Version History
+
+- **v1.0.0**: Initial release with core functionality
+- **v1.1.0**: Added file management system
+- **v1.2.0**: Enhanced patient portal with cost tracking
+- **v1.3.0**: Improved responsive design and UI/UX
+
+## 🎯 Future Enhancements
+
+- [ ] Email notifications for appointments
+- [ ] SMS reminders
+- [ ] Payment processing integration
+- [ ] Advanced reporting and analytics
+- [ ] Multi-location support
+- [ ] API integration for external systems
+- [ ] Mobile app development
+- [ ] Telemedicine features
+
+---
+
+**Built with ❤️ for ENTNT Technical Assignment**
+
